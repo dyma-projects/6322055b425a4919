@@ -1,15 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-exercice1',
-  templateUrl: './exercice1.component.html',
-  styleUrls: ['./exercice1.component.css']
+  selector: "app-exercice1",
+  templateUrl: "./exercice1.component.html",
+  styleUrls: ["./exercice1.component.css"],
 })
 export class Exercice1Component implements OnInit {
+  constructor() {}
 
-  constructor() { }
+  public titre: string = "Mon 1er exercice";
 
-  ngOnInit(): void {
+  public numberOfLike: number = 0;
+
+  public isSubmit: string = "cliquez pour liker";
+
+  public addLike() {
+    // incrémentation de +1 du nombre de like
+    this.numberOfLike++;
   }
 
+  ngOnInit(): void {}
 }
